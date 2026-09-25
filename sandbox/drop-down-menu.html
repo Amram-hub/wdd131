@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu Demo</title>
+
     <script src="drop-down-menu.js" defer></script>
-    <style> 
+
+    <style>
         nav > ul {
             display: flex;
             list-style: none;
@@ -19,28 +21,44 @@
             list-style: none;
             padding-left: 0;
         }
+
+        /*
+        .show {
+            display: block;
+        }
+        */
+
+        input {
+            display: block;
+            margin-top: 20px;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Menu Demo</h1>
+
         <nav>
             <ul>
+                <li>
+                    <a href="#">Link1</a>
 
-                <li><a href="#">Link1</a></li>
-                     <ul class="sub-menu">
+                    <ul class="sub-menu">
                         <li><a href="#">Sub1</a></li>
                         <li><a href="#">Sub2</a></li>
                         <li><a href="#">Sub3</a></li>
                         <li><a href="#">Sub4</a></li>
-                     </ul>
-                
+                    </ul>
+                </li>
+
                 <li><a href="#">Link2</a></li>
                 <li><a href="#">Link3</a></li>
                 <li><a href="#">Link4</a></li>
             </ul>
-        </nav> 
+        </nav>
+
+        <input type="text" placeholder="Search...">
     </header>
-    <input type="text" placeholder="Search...">
 </body>
 </html>
