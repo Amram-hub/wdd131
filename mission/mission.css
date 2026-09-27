@@ -1,6 +1,7 @@
 body {
     font-family: "Times New Roman", serif;
     background-color: white;
+    color: #333;
     margin: 0;
     padding: 50px;
 }
@@ -62,4 +63,32 @@ img {
     width: 70px;
     height: auto;
     margin: 30px auto 0;
+}
+
+/* Theme dropdown */
+
+#theme {
+    display: block;
+    margin: 0 auto 25px;
+    padding: 6px;
+    font-family: Arial, sans-serif;
+}
+
+/* DARK THEME */
+
+body.dark {
+    background-color: #333;
+    color: white;
+}
+
+body.dark main {
+    border-color: #777;
+}
+
+body.dark h2 {
+    color: #66b3e8;
+}
+
+body.dark hr {
+    border-top-color: #777;
 }
