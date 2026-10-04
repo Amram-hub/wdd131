@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eeeeee;
+  color: #222222;
+}
+
+header,
+footer {
+  background-color: #52489c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0 0 15px;
+  font-size: 2.5rem;
+}
+
+.menu-button {
+  border: none;
+  background: transparent;
+  color: white;
+  font: inherit;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* Navigation stays hidden on mobile for Part 1. */
+nav {
+  display: none;
+}
+
+nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 10px 35px;
+}
+
+h2 {
+  text-align: center;
+  margin: 10px 0 25px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 25px;
+}
+
+figure {
+  margin: 0;
+}
+
+.gallery img {
+  display: block;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 6px solid white;
+  box-shadow: 3px 3px 8px #777777;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Medium screens: two columns. */
+@media screen and (min-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large screens: three columns and visible navigation. */
+@media screen and (min-width: 1000px) {
+  .menu-button {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 10px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
