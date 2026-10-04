@@ -1,3 +1,5 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
 * {
   box-sizing: border-box;
 }
@@ -31,7 +33,7 @@ h1 {
   cursor: pointer;
 }
 
-/* Navigation stays hidden on mobile for Part 1. */
+/* Hide navigation on small screens. */
 nav {
   display: none;
 }
@@ -53,6 +55,7 @@ h2 {
   margin: 10px 0 25px;
 }
 
+/* Mobile: one column. */
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
@@ -68,6 +71,7 @@ figure {
   display: block;
   width: 250px;
   height: 250px;
+  max-width: 100%;
   object-fit: cover;
   border: 6px solid white;
   box-shadow: 3px 3px 8px #777777;
@@ -84,7 +88,7 @@ footer p {
   }
 }
 
-/* Large screens: three columns and visible navigation. */
+/* Wide screens: three columns and visible links. */
 @media screen and (min-width: 1000px) {
   .menu-button {
     display: none;
