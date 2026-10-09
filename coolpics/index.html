@@ -5,17 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Cool Pics responsive photo gallery.">
   <meta name="author" content="Amram Kodjo Avegnon">
+
   <title>Cool Pics | WDD 131</title>
+
   <link rel="stylesheet" href="styles.css">
   <script src="coolpics.js" defer></script>
 </head>
+
 <body>
   <header>
     <h1>Cool Pics 📷</h1>
 
-    <button class="menu-button" type="button">Menu</button>
+    <button
+      class="menu-button"
+      type="button"
+      aria-expanded="false"
+      aria-controls="main-nav"
+    >
+      Menu
+    </button>
 
-    <nav aria-label="Main navigation">
+    <nav id="main-nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="#">People</a>
       <a href="#">Places</a>
@@ -30,47 +40,56 @@
     <div class="gallery">
       <figure>
         <img src="norris-sm.jpg"
-             alt="Scenic landscape at Norris" width="250" height="250">
+             alt="Scenic landscape at Norris"
+             width="250" height="250">
       </figure>
 
       <figure>
         <img src="norris-sm.jpg"
-             alt="Scenic landscape at Norris" width="250" height="250">
+             alt="Scenic landscape at Norris"
+             width="250" height="250">
       </figure>
 
       <figure>
         <img src="norris-sm.jpg"
-             alt="Scenic landscape at Norris" width="250" height="250">
+             alt="Scenic landscape at Norris"
+             width="250" height="250">
       </figure>
 
       <figure>
         <img src="norris-sm.jpg"
-             alt="Scenic landscape at Norris" width="250" height="250">
+             alt="Scenic landscape at Norris"
+             width="250" height="250">
       </figure>
 
       <figure>
         <img src="norris-sm.jpg"
-             alt="Scenic landscape at Norris" width="250" height="250">
+             alt="Scenic landscape at Norris"
+             width="250" height="250">
       </figure>
 
       <figure>
         <img src="norris-sm.jpg"
-             alt="Scenic landscape at Norris" width="250" height="250">
+             alt="Scenic landscape at Norris"
+             width="250" height="250">
       </figure>
 
       <figure>
         <img src="norris-sm.jpg"
-             alt="Scenic landscape at Norris" width="250" height="250">
+             alt="Scenic landscape at Norris"
+             width="250" height="250">
       </figure>
 
       <figure>
         <img src="norris-sm.jpg"
-             alt="Scenic landscape at Norris" width="250" height="250">
+             alt="Scenic landscape at Norris"
+             width="250" height="250">
       </figure>
 
       <figure>
         <img src="norris-sm.jpg"
-             alt="Scenic landscape at Norris" width="250" height="250">
+             alt="Scenic landscape at Norris"
+             width="250" height="250">
       </figure>
     </div>
   </main>
@@ -78,5 +97,17 @@
   <footer>
     <p>© 2026 Amram Kodjo Avegnon | Cool Pics</p>
   </footer>
+
+  <dialog class="image-modal" aria-label="Enlarged photo">
+    <button
+      class="close-modal"
+      type="button"
+      aria-label="Close image"
+    >
+      ×
+    </button>
+
+    <img class="modal-image" alt="">
+  </dialog>
 </body>
 </html>
