@@ -7,18 +7,25 @@
   <meta name="author" content="Amram Kodjo Avegnon">
   <title>Responsive Design | Scriptures</title>
   <link rel="stylesheet" href="ResponsiveDesign.css">
+  <script src="ResponsiveDesign.js" defer></script>
 </head>
 <body>
   <header>
     <h1>Responsive Design 📖 Scriptures</h1>
 
-    <button class="menu-btn" type="button" aria-label="Menu">
+    <button
+      class="menu-btn"
+      type="button"
+      aria-label="Toggle menu"
+      aria-controls="main-nav"
+      aria-expanded="false"
+    >
       <span class="bar1"></span>
       <span class="bar2"></span>
       <span class="bar3"></span>
     </button>
 
-    <nav aria-label="Main navigation">
+    <nav id="main-nav" class="hide" aria-label="Main navigation">
       <a href="#">Home</a>
       <a href="#">Scriptures</a>
       <a href="#">Favorites</a>
