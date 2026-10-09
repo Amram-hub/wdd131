@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive image gallery with modal previews.">
+  <meta name="author" content="Amram Kodjo Avegnon">
+  <title>Responsive Gallery</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="ResponsiveGallery.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Gallery</h1>
+  </header>
+
+  <main>
+    <section class="gallery" aria-label="Photo gallery">
+      <figure>
+        <button class="thumbnail" type="button">
+          <img src="images/book-sm.jpg"
+               data-full="images/book.jpg"
+               alt="Person reading a book">
+        </button>
+      </figure>
+
+      <figure>
+        <button class="thumbnail" type="button">
+          <img src="images/couch-sm.jpg"
+               data-full="images/couch.jpg"
+               alt="Person sitting on a couch with a phone">
+        </button>
+      </figure>
+
+      <figure>
+        <button class="thumbnail" type="button">
+          <img src="images/desk-sm.jpg"
+               data-full="images/desk.jpg"
+               alt="A work desktop">
+        </button>
+      </figure>
+
+      <figure>
+        <button class="thumbnail" type="button">
+          <img src="images/keyboard-sm.jpg"
+               data-full="images/keyboard.jpg"
+               alt="Person typing on a keyboard">
+        </button>
+      </figure>
+
+      <figure>
+        <button class="thumbnail" type="button">
+          <img src="images/phone-sm.jpg"
+               data-full="images/phone.jpg"
+               alt="Person looking at a phone">
+        </button>
+      </figure>
+
+      <figure>
+        <button class="thumbnail" type="button">
+          <img src="images/sit-sm.jpg"
+               data-full="images/sit.jpg"
+               alt="Person sitting on a couch">
+        </button>
+      </figure>
+    </section>
+
+    <dialog aria-label="Enlarged photo">
+      <img class="modal-image" alt="">
+      <button class="close-viewer" type="button"
+              aria-label="Close enlarged photo">X</button>
+    </dialog>
+  </main>
+
+  <footer>
+    <p>© 2026 Amram Kodjo Avegnon</p>
+  </footer>
+</body>
+</html>
