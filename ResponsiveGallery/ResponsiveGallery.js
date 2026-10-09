@@ -1,42 +1,60 @@
 const gallery = document.querySelector(".gallery");
 const modal = document.querySelector("dialog");
-const modalImage = modal.querySelector(".modal-image");
+const modalImage = modal.querySelector("img");
 const closeButton = modal.querySelector(".close-viewer");
 
-// Open the larger image when a thumbnail button is clicked.
-gallery.addEventListener("click", openModal);
+let activePreview = null;
 
-function openModal(event) {
+gallery.addEventListener("click", (event) => {
   const thumbnail = event.target.closest(".thumbnail");
+  const image = thumbnail
+    ? thumbnail.querySelector("img")
+    : event.target.closest("img");
 
-  // Ignore clicks on empty gallery space.
-  if (!thumbnail) {
+  if (!image || !gallery.contains(image)) {
     return;
   }
 
-  const image = thumbnail.querySelector("img");
-
-  modalImage.src = image.dataset.full;
+  // Show the thumbnail immediately.
+  activePreview = null;
+  modalImage.src = image.currentSrc || image.src;
   modalImage.alt = image.alt;
 
-  modal.showModal();
-  document.body.classList.add("modal-open");
-}
+  if (!modal.open) {
+    modal.showModal();
+  }
 
-// Close with the X button.
+  document.body.classList.add("modal-open");
+
+  // Replace it with the larger picture if available.
+  const fullImagePath = image.dataset.full;
+
+  if (fullImagePath) {
+    const preview = new Image();
+    activePreview = preview;
+
+    preview.onload = () => {
+      if (modal.open && activePreview === preview) {
+        modalImage.src = preview.src;
+      }
+    };
+
+    preview.src = fullImagePath;
+  }
+});
+
 closeButton.addEventListener("click", () => {
   modal.close();
 });
 
-// Close when clicking the space outside the image.
 modal.addEventListener("click", (event) => {
   if (event.target === modal) {
     modal.close();
   }
 });
 
-// Runs after closing with X, an outside click, or Escape.
-// Escape support is built into showModal().
+// Escape closes the dialog automatically.
 modal.addEventListener("close", () => {
+  activePreview = null;
   document.body.classList.remove("modal-open");
 });
