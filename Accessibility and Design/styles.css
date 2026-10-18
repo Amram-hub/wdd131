@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+header,
+footer {
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 0.5rem;
+}
+
+.main-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav a {
+  display: inline-block;
+  padding: 0.65rem 1rem;
+  color: #ffc107;
+  text-decoration: none;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 3px solid #006eb6;
+  outline-offset: 4px;
+}
+
+header a:focus-visible {
+  outline-color: #ffc107;
+}
+
+/* Visible when reached with the Tab key. */
+.skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: white;
+  color: #222;
+  transform: translateY(-200%);
+  z-index: 10;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Screen-reader text that stays visually hidden. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Mobile layout: one column. */
+#movie-list {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.movie {
+  min-width: 0;
+  border: 2px solid #ccc;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.movie h2 {
+  color: #b30059;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  text-align: center;
+  margin: 0 0 1rem;
+}
+
+.movie img {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.movie-details p {
+  margin: 0.75rem 0;
+}
+
+.description {
+  margin-bottom: 0;
+}
+
+/* Wider screens: poster and details side by side. */
+@media (min-width: 600px) {
+  .main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .movie {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1rem;
+    align-content: start;
+  }
+
+  .movie h2,
+  .description {
+    grid-column: 1 / -1;
+  }
+
+  .movie h2 {
+    margin-bottom: 0;
+  }
+
+  .movie img {
+    margin: 0 auto;
+  }
+
+  .movie-details p:first-child {
+    margin-top: 0;
+  }
+
+  .description {
+    margin-top: 0;
+  }
+}
+
+/* Desktop layout: two movie cards side by side. */
+@media (min-width: 1000px) {
+  #movie-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
