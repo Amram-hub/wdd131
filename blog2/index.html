@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Book reviews to help families discover their next great read.">
+  <title>Kids Read for Fun</title>
+  <link rel="stylesheet" href="blog.css">
+  <script src="blog.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <h1>Kids Read for Fun</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Archive</a></li>
+        <li><a href="#search">Search</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section id="reviews" aria-label="Book reviews">
+      <!-- JavaScript inserts the book articles here. -->
+    </section>
+
+    <aside id="search" aria-labelledby="filter-heading">
+      <h2 id="filter-heading">Find a Book</h2>
+
+      <label for="age-filter">Age</label>
+      <select id="age-filter">
+        <option value="">All ages</option>
+        <option value="10-14">10–14</option>
+        <option value="12-16">12–16</option>
+      </select>
+
+      <label for="rating-filter">Rating</label>
+      <select id="rating-filter">
+        <option value="">All ratings</option>
+        <option value="4">4 stars</option>
+        <option value="5">5 stars</option>
+      </select>
+
+      <label for="genre-filter">Genre</label>
+      <select id="genre-filter">
+        <option value="">All genres</option>
+        <option value="Fantasy">Fantasy</option>
+      </select>
+
+      <p id="result-count" role="status"></p>
+    </aside>
+  </main>
+
+  <footer id="about">
+    <p>Kids Read for Fun — Discover your next adventure.</p>
+  </footer>
+</body>
+</html>
