@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snortleblat | Character Card</title>
+  <meta name="description" content="Meet Snortleblat, a Swamp Beast Diplomat. Attack to change its health or level up to increase its level.">
+
+  <!-- Replace YOUR-GITHUB-USERNAME with your GitHub username before publishing. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Snortleblat | Character Card">
+  <meta property="og:description" content="Meet Snortleblat, a Swamp Beast Diplomat.">
+  <meta property="og:url" content="https://YOUR-GITHUB-USERNAME.github.io/wdd131/charactercard/">
+  <meta property="og:image" content="https://YOUR-GITHUB-USERNAME.github.io/wdd131/charactercard/images/social-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Snortleblat | Character Card">
+  <meta name="twitter:description" content="Meet Snortleblat, a Swamp Beast Diplomat.">
+  <meta name="twitter:image" content="https://YOUR-GITHUB-USERNAME.github.io/wdd131/charactercard/images/social-preview.png">
+
+  <link rel="icon" href="images/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="character.js" defer></script>
+</head>
+<body>
+  <main>
+    <article class="card" aria-labelledby="character-name">
+      <img id="character-image" class="portrait" src="images/snortleblat.webp" width="400" height="320" alt="Portrait of Snortleblat">
+      <div class="card-body">
+        <p class="eyebrow">Character Card</p>
+        <h1 id="character-name"></h1>
+
+        <dl class="stats">
+          <div><dt>Class</dt><dd id="character-class"></dd></div>
+          <div><dt>Level</dt><dd id="character-level"></dd></div>
+          <div><dt>Health</dt><dd id="character-health"></dd></div>
+        </dl>
+
+        <div class="actions">
+          <button type="button" id="attack">Attacked</button>
+          <button type="button" id="level-up">Level Up</button>
+        </div>
+        <p id="status" role="status"></p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

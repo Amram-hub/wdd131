@@ -1,0 +1,120 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, sans-serif;
+  background: #132320;
+  color: #f6f4e9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem 1rem;
+}
+
+.card {
+  width: min(100%, 25rem);
+  overflow: hidden;
+  border: 1px solid #607c6e;
+  border-radius: 1rem;
+  background: #223932;
+  box-shadow: 0 14px 40px #091210;
+}
+
+.portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #cae1d3;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0.25rem 0 0;
+  font-family: Georgia, serif;
+  font-size: clamp(1.8rem, 8vw, 2.5rem);
+}
+
+.stats {
+  margin: 1rem 0;
+}
+
+.stats div {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #607c6e;
+}
+
+dt {
+  color: #cae1d3;
+}
+
+dd {
+  margin: 0;
+  font-weight: 700;
+  text-align: right;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+button {
+  min-height: 44px;
+  padding: 0.5rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: #d4ebd2;
+  color: #132320;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:not([aria-disabled="true"]):hover {
+  background: #f6f4e9;
+}
+
+button:focus-visible {
+  outline: 2px solid #f6f4e9;
+  outline-offset: 3px;
+}
+
+button[aria-disabled="true"] {
+  background: #52685c;
+  color: #f6f4e9;
+  cursor: default;
+}
+
+#status {
+  min-height: 1.5em;
+  margin: 0.75rem 0 0;
+  color: #f7dfa3;
+  font-size: 0.9rem;
+}
