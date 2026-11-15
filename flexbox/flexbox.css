@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 20px;
+  max-width: 1280px;
+  margin: auto;
+  padding: 1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+}
+
+hr {
+  margin-top: 50px;
+}
+
+.media-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.media-card-image {
+  flex: 0 0 40%;
+  min-width: 0;
+}
+
+.media-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.media-card-content h3 {
+  margin-top: 1em;
+}
+
+.media-card-image img {
+  display: block;
+  width: 100%;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.gallery .media-card {
+  flex: 0 1 calc(50% - 15px);
+}
+
+.gallery .media-card-image {
+  flex-basis: 30%;
+}
+
+@media (max-width: 600px) {
+  .main-nav {
+    gap: 12px;
+  }
+
+  .media-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .gallery .media-card {
+    flex-basis: 100%;
+  }
+
+  .media-card-image,
+  .gallery .media-card-image {
+    flex-basis: auto;
+  }
+}
+
+/* Header layout from the assignment example. */
+header h1 {
+  text-align: left;
+  margin-top: 0;
+}
+
+header nav {
+  width: 100%;
+}
+
+.main-nav {
+  justify-content: flex-end;
+  flex-direction: row;
+}
